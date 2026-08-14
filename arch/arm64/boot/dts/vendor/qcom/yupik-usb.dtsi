@@ -60,6 +60,7 @@
 		qcom,usb-charger = <&battery_charger>;
 
 		dwc3@a600000 {
+                        status = "disabled";
 			compatible = "snps,dwc3";
 			reg = <0xa600000 0xe000>;
 			interrupts = <GIC_SPI 133 IRQ_TYPE_LEVEL_HIGH>;
