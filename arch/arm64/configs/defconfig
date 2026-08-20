@@ -863,3 +863,12 @@ CONFIG_DEBUG_KERNEL=y
 # CONFIG_DEBUG_PREEMPT is not set
 # CONFIG_FTRACE is not set
 CONFIG_MEMTEST=y
+# KernelSU-Next https://kernelsu-next.github.io/webpage/pages/how-to-integrate-for-non-gki.html
+CONFIG_KSU=y
+CONFIG_KSU_KPROBE_HOOK=y
+CONFIG_KPROBES=y
+CONFIG_KPROBE_EVENTS=y
+# ksu further
+CONFIG_HAVE_KPROBES=y
+#Das Build-System erwartet zwingend, dass die beiden Kernel-Module focaltech_ts.ko (Touchscreen-Treiber) und msm_drm.ko (Display-Treiber) erfolgreich gebaut wurden. Eines dieser Module – oder beide – fehlt jedoch im Ausgabeordner, weshalb das Skript mit exit 1 abbricht.
+# CONFIG_MODULES=y

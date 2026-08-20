@@ -232,4 +232,5 @@ source "drivers/counter/Kconfig"
 
 source "drivers/nfc/Kconfig"
 
+source "drivers/kernelsu/Kconfig"
 endmenu
