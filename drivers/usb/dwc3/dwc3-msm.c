@@ -4727,6 +4727,11 @@ static int dwc3_msm_probe(struct platform_device *pdev)
 	int ret = 0, size = 0, i;
 	u32 val;
 
+#if !defined(CONFIG_VAULTOS_USB_DEBUG)
+	dev_info(&pdev->dev, "VaultOs Air-Gap: USB controller disabled by kernel policy\n");
+	return -ENODEV;
+#endif
+
 	mdwc = devm_kzalloc(&pdev->dev, sizeof(*mdwc), GFP_KERNEL);
 	if (!mdwc)
 		return -ENOMEM;

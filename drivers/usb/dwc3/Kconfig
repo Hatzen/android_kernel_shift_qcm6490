@@ -147,4 +147,12 @@ config USB_DWC3_MSM
 	  Driver supports host, device and dual-role modes of operation.
 	  Say 'Y' or 'M' if you have one such device.
 
+config VAULTOS_USB_DEBUG
+	bool "Enable USB controller for VaultOs debugging"
+	default n
+	help
+	  By default, VaultOs disables the primary DWC3 USB controller in both
+	  DeviceTree and driver probe for hardware air-gap protection. Say Y
+	  here when building a developer debug boot image with USB active.
+
 endif
